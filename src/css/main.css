@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, 'Segoe UI', Roboto, Oxygen,  'Open Sans', 'Helvetica Neue', sans-serif;
+  background: gainsboro;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  height: 100dvh;
+  /* no todos los navegadores soportan dvh por eso podemos poner ambas en caso de que el navegador no pueda cargarlo cogerá vh */
+}
+
+main {
+  width: 400px;
+  max-width: 100%;
+  height: 70vh;
+
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  margin-bottom: 16px;
+
+  overflow-y: auto;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 4px 0;
+  padding: 4px 8px;
+
+  > p:first-child {
+    width: 36px;
+    height: 36px;
+    background: gainsboro;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  > p:last-child {
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+
+  &.user {
+    align-self: flex-end;
+    align-items: flex-end;
+    p {
+      background: rgb(255, 215, 255);
+    }
+  }
+
+  &.bot {
+    align-self: flex-start;
+    p {
+      background: rgb(182, 255, 231);
+    }
+  }
+}
+
+form {
+  display: flex;
+
+  input {
+    border-radius: 20px;
+    flex-grow: 1;
+    border: 0;
+    padding: 8px;
+    margin-right: 8px;
+    border: 1px solid #ccc;
+  }
+}
+
+button {
+  background: teal;
+  border: 0;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px;
+  transition: background .3s ease;
+
+  &:hover {
+    background: lightseagreen;
+  }
+}

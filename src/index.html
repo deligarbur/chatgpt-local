@@ -5,24 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT Local</title>
+    <link rel="stylesheet" href="./css/main.css">
   </head>
 
   <body>
     <main>
       <ul>
         <li class="message bot">
-          <span>GPT</span>
-          <span>Esta es la respuesta del bot</span>
+          <p>GPT</p>
+          <p>Esta es la respuesta del bot</p>
         </li>
 
         <li class="message user">
-          <span>Tú</span>
-          <span>Esta es la respuesta del usuario</span>
+          <p>Tú</p>
+          <p>Esta es la respuesta del usuario</p>
         </li>
 
         <li class="message user">
-          <span>Tú</span>
-          <span>Esta es la respuesta del usuario y es una respuesta muy larga para ver que no se rompe nada</span>
+          <p>Tú</p>
+          <p>Esta es la respuesta del usuario y es una respuesta muy larga para ver que no se rompe nada</p>
         </li>
       </ul>
     </main>
@@ -31,6 +32,15 @@
       <input placeholder="Escribe tu mensaje aquí ...">
       <button>Enviar</button>
     </form>
+
+    <template id="message-template">
+      <li class="message">
+        <p></p>
+        <p></p>
+      </li>
+    </template>
+
+    <script src="./js/main.js" type="text/javascript"></script>
 
   </body>
 
