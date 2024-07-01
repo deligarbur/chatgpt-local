@@ -1,6 +1,6 @@
 import { CreateMLCEngine } from 'https://esm.run/@mlc-ai/web-llm';
 
-const SELECTED_MODEL = 'gemma-2b-it-q4f32_1-MLC';
+const SELECTED_MODEL = 'gemma-2b-it-q4f16_1-MLC';
 
 const engine = await CreateMLCEngine(SELECTED_MODEL, {
 	initProgressCallback: info => {
