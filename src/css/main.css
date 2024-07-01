@@ -43,7 +43,7 @@ ul {
   margin: 4px 0;
   padding: 4px 8px;
 
-  > p:first-child {
+  > span:first-child {
     width: 36px;
     height: 36px;
     background: gainsboro;
@@ -63,14 +63,14 @@ ul {
   &.user {
     align-self: flex-end;
     align-items: flex-end;
-    p {
+    p, span {
       background: rgb(255, 215, 255);
     }
   }
 
   &.bot {
     align-self: flex-start;
-    p {
+    p, span {
       background: rgb(182, 255, 231);
     }
   }
