@@ -1,4 +1,12 @@
-'use strict';
+import { CreateMLCEngine } from 'https://esm.run/@mlc-ai/web-llm';
+
+const SELECTED_MODEL = 'gemma-2b-it-q4f32_1-MLC';
+
+const engine = await CreateMLCEngine(SELECTED_MODEL, {
+	initProgressCallback: info => {
+		console.log('initProgressCallback', info);
+	},
+});
 
 // pongo delante de la variable un símbolo de $ para indicar que es un elemento del DOM
 const $form = document.querySelector('form');
