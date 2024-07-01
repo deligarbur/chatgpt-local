@@ -27,6 +27,7 @@ main {
   margin-bottom: 16px;
 
   overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
 ul {
@@ -97,6 +98,13 @@ button {
   cursor: pointer;
   padding: 8px;
   transition: background .3s ease;
+
+  /* le estamos diciendo que si tiene el atributo disabled, se apliquen estos estilos */
+  &[disabled] {
+    background: #ccc;
+    opacity: 0.6;
+    pointer-events: none;
+  }
 
   &:hover {
     background: lightseagreen;
